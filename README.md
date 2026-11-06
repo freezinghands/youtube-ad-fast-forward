@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml"><img src="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License: Apache-2.0"></a>
+  <a href="https://doi.org/10.5281/zenodo.24005315"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24005315.svg" alt="DOI"></a>
   <img src="https://img.shields.io/badge/site%20access-www.youtube.com%20only-brightgreen" alt="Site access: www.youtube.com only">
 </p>
 
@@ -29,6 +30,19 @@
 - **You stay in control.** It never clicks Skip for you. A long ad waits, paused, until you press it.
 - **It cleans up after itself.** It undoes only the mutes it made: your own mute and other extensions' mutes stay.
 - **Tested on every change.** End-to-end tests run in CI against a fake YouTube page, so the tests never contact YouTube.
+
+## Install
+
+Ad Fast-Forward has been submitted to the Chrome Web Store and is in review. Until it is published there, install it from a release:
+
+1. Download the ZIP from the [latest release](https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest) and unzip it. You can also clone this repository and use its `extension/` folder.
+2. Open `chrome://extensions` and turn on **Developer mode**.
+3. Click **Load unpacked** and choose the unzipped folder (or `extension/`).
+4. Pin Ad Fast-Forward from the Extensions menu (the puzzle icon) so its toolbar icon is at hand during an ad.
+
+It needs Chrome 123 or later. Before you install it, read [YouTube policy changes](#youtube-policy-changes).
+
+After you turn the extension off or reload it, reload your open YouTube tabs too. Otherwise their ads play black, at 1x and with sound, because only the CSS is left.
 
 ## How it works
 
@@ -89,24 +103,13 @@ This extension relies on how YouTube works today. YouTube can change its player,
 
 The extension does not detect warnings or adapt by itself, and it does not update itself. If any of this happens, turn it off in `chrome://extensions` and reload your YouTube tabs.
 
-## Install
-
-1. Download this repository (**Code > Download ZIP**, then unzip it) or clone it. Each [release](https://github.com/freezinghands/youtube-ad-fast-forward/releases) also has a ZIP of the extension alone.
-2. Open `chrome://extensions` and turn on **Developer mode**.
-3. Click **Load unpacked** and choose the `extension/` folder (or the unzipped release folder).
-4. Pin Ad Fast-Forward from the Extensions menu (the puzzle icon) so its toolbar icon is at hand during an ad.
-
-It needs Chrome 123 or later.
-
-After you turn the extension off or reload it, reload your open YouTube tabs too. Otherwise their ads play black, at 1x and with sound, because only the CSS is left.
-
 ## Translations
 
 The extension's name, description and toolbar tooltip are translated in [`extension/_locales/`](extension/_locales), currently into English and Korean. To add a language, see [Translations in CONTRIBUTING.md](CONTRIBUTING.md#translations) or [open a translation issue](https://github.com/freezinghands/youtube-ad-fast-forward/issues/new?template=translation.yml).
 
 ## Roadmap
 
-- [ ] Chrome Web Store listing
+- [ ] Chrome Web Store listing (submitted, in review)
 - [ ] Microsoft Edge Add-ons and Naver Whale Store listings
 - [ ] Firefox support ([`browser-port` issues](https://github.com/freezinghands/youtube-ad-fast-forward/labels/browser-port), help wanted)
 - [ ] More translations ([`translation` issues](https://github.com/freezinghands/youtube-ad-fast-forward/labels/translation), good first issues)

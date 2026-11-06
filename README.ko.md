@@ -12,6 +12,7 @@
 <p align="center">
   <a href="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml"><img src="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License: Apache-2.0"></a>
+  <a href="https://doi.org/10.5281/zenodo.24005315"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24005315.svg" alt="DOI"></a>
   <img src="https://img.shields.io/badge/site%20access-www.youtube.com%20only-brightgreen" alt="Site access: www.youtube.com only">
 </p>
 
@@ -31,6 +32,19 @@
 - **조작은 사용자가 합니다.** 건너뛰기를 대신 누르지 않습니다. 긴 광고는 사용자가 누를 때까지 멈춰서 기다립니다.
 - **뒷정리를 합니다.** 자신이 건 음소거만 풉니다. 사용자가 건 음소거와 다른 확장 프로그램이 건 음소거는 그대로 둡니다.
 - **변경마다 테스트합니다.** 가짜 YouTube 페이지를 상대로 한 e2e 테스트가 CI에서 실행되므로, 테스트가 YouTube에 접속하지 않습니다.
+
+## 설치
+
+Chrome 웹스토어에 제출해 심사를 받고 있습니다. 스토어에 게시되기 전까지는 릴리스에서 설치하세요.
+
+1. [최신 릴리스](https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest)에서 ZIP을 내려받아 압축을 풉니다. 이 저장소를 클론해서 `extension/` 폴더를 써도 됩니다.
+2. `chrome://extensions`를 열고 **개발자 모드**를 켭니다.
+3. **압축해제된 확장 프로그램 로드**를 누르고 압축을 푼 폴더(또는 `extension/`)를 고릅니다.
+4. 확장 프로그램 메뉴(퍼즐 아이콘)에서 Ad Fast-Forward를 고정해 두면 광고 중에 툴바 아이콘을 바로 누를 수 있습니다.
+
+Chrome 123 이상이 필요합니다. 설치하기 전에 [YouTube 정책 변경](#youtube-정책-변경)을 읽어 주세요.
+
+확장을 끄거나 다시 로드한 뒤에는 열려 있는 YouTube 탭도 새로고침하세요. 그러지 않으면 CSS만 남아서 광고가 검은 화면에 1배속으로, 소리와 함께 재생됩니다.
 
 ## 동작 방식
 
@@ -91,24 +105,13 @@ Chrome 확장을 설치할 수 있는 Chromium 브라우저라면 동작할 것�
 
 이 확장은 경고를 감지하거나 스스로 대응하지 않으며, 스스로 업데이트하지도 않습니다. 이런 일이 생기면 `chrome://extensions`에서 확장을 끄고 YouTube 탭을 새로고침하세요.
 
-## 설치
-
-1. 이 저장소를 내려받거나(**Code > Download ZIP** 후 압축 해제) 클론합니다. 각 [릴리스](https://github.com/freezinghands/youtube-ad-fast-forward/releases)에도 확장만 담은 ZIP이 있습니다.
-2. `chrome://extensions`를 열고 **개발자 모드**를 켭니다.
-3. **압축해제된 확장 프로그램 로드**를 누르고 `extension/` 폴더(또는 압축을 푼 릴리스 폴더)를 고릅니다.
-4. 확장 프로그램 메뉴(퍼즐 아이콘)에서 Ad Fast-Forward를 고정해 두면 광고 중에 툴바 아이콘을 바로 누를 수 있습니다.
-
-Chrome 123 이상이 필요합니다.
-
-확장을 끄거나 다시 로드한 뒤에는 열려 있는 YouTube 탭도 새로고침하세요. 그러지 않으면 CSS만 남아서 광고가 검은 화면에 1배속으로, 소리와 함께 재생됩니다.
-
 ## 번역
 
 확장의 이름, 설명, 툴바 툴팁은 [`extension/_locales/`](extension/_locales)에서 번역하며, 지금은 영어와 한국어가 있습니다. 언어를 추가하려면 [CONTRIBUTING.md의 Translations](CONTRIBUTING.md#translations)를 보거나 [번역 이슈](https://github.com/freezinghands/youtube-ad-fast-forward/issues/new?template=translation.yml)를 열어 주세요.
 
 ## 로드맵
 
-- [ ] Chrome 웹스토어 등록
+- [ ] Chrome 웹스토어 등록 (제출, 심사 중)
 - [ ] Microsoft Edge Add-ons, 네이버 웨일 스토어 등록
 - [ ] Firefox 지원 ([`browser-port` 이슈](https://github.com/freezinghands/youtube-ad-fast-forward/labels/browser-port), 도움 요청)
 - [ ] 번역 추가 ([`translation` 이슈](https://github.com/freezinghands/youtube-ad-fast-forward/labels/translation), 처음 기여하기 좋은 이슈)
