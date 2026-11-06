@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question or idea
+    url: https://github.com/freezinghands/youtube-ad-fast-forward/discussions
+    about: Ask a question or suggest an idea in Discussions.
+  - name: Frequently asked questions
+    url: https://github.com/freezinghands/youtube-ad-fast-forward#faq
+    about: Skip clicking, the 16x rate, other sites and browsers, data collection.

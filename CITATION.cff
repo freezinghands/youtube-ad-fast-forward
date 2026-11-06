@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: If you refer to this software, please cite it as below.
+type: software
+title: Ad Fast-Forward for YouTube
+abstract: >-
+  A Chrome extension that mutes YouTube video ads, blacks them out and plays them at 16x,
+  and pauses long ads once so the user can press Skip. It needs no permissions and has no
+  build step.
+authors:
+  - family-names: Lee
+    given-names: Jaeyun
+    alias: freezinghands
+repository-code: https://github.com/freezinghands/youtube-ad-fast-forward
+license: Apache-2.0
+keywords:
+  - youtube
+  - youtube-ads
+  - chrome-extension
+  - browser-extension
+  - manifest-v3

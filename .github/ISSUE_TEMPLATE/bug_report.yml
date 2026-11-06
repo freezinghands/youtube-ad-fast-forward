@@ -1,0 +1,47 @@
+name: Bug report
+description: The extension does not do what the README describes.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        YouTube changes its player without notice, so the extension can break from time to time.
+        Before you report, reload your YouTube tabs after installing or reloading the extension.
+  - type: input
+    id: extension-version
+    attributes:
+      label: Extension version
+      description: Shown in chrome://extensions.
+      placeholder: 0.5.0
+    validations:
+      required: true
+  - type: input
+    id: chrome-version
+    attributes:
+      label: Chrome version
+      description: Shown in chrome://version.
+    validations:
+      required: true
+  - type: dropdown
+    id: ad-kind
+    attributes:
+      label: Which ad
+      options:
+        - Before the video
+        - In the middle of the video
+        - Two or more ads in a row
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw and heard, what you expected instead, and the steps to see it again if you know them.
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: More details
+      description: Console errors, the classes on `#movie_player` while the ad shows, other extensions you use. Never paste cookies or account details.

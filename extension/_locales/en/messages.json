@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Ad Fast-Forward for YouTube",
+    "description": "Extension name. Keep \"YouTube\" as is. At most 75 characters."
+  },
+  "extDescription": {
+    "message": "Mutes YouTube video ads, blacks them out and plays them at 16x. Long ads pause once so you can press Skip.",
+    "description": "Shown in the Chrome Web Store and chrome://extensions. At most 132 characters."
+  },
+  "actionTitle": {
+    "message": "Ad Fast-Forward: unmute this tab now",
+    "description": "Tooltip of the toolbar button, which unmutes the tab during an ad break."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Ad Fast-Forward for YouTube: 광고 빨리감기",
+    "description": "Extension name. Keep \"YouTube\" as is. At most 75 characters."
+  },
+  "extDescription": {
+    "message": "YouTube 동영상 광고를 음소거하고 화면을 가린 채 16배속으로 재생합니다. 긴 광고는 한 번 멈춰서 직접 건너뛸 수 있게 합니다.",
+    "description": "Shown in the Chrome Web Store and chrome://extensions. At most 132 characters."
+  },
+  "actionTitle": {
+    "message": "Ad Fast-Forward: 이 탭 소리 바로 켜기",
+    "description": "Tooltip of the toolbar button, which unmutes the tab during an ad break."
+  }
+}

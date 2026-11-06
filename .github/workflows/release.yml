@@ -1,0 +1,37 @@
+name: release
+
+# Push a tag that matches the manifest version (for example v0.5.0) to publish a GitHub release
+# with the package to upload to the browser stores.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Check that the tag matches the manifest version
+        run: |
+          version="v$(jq -r .version extension/manifest.json)"
+          if [ "$version" != "$GITHUB_REF_NAME" ]; then
+            echo "::error::Tag $GITHUB_REF_NAME does not match manifest version $version"
+            exit 1
+          fi
+      - name: Build the store package
+        run: |
+          zip_name="youtube-ad-fast-forward-$GITHUB_REF_NAME.zip"
+          (cd extension && zip -r -X "../$zip_name" . -x '.*' '*/.*')
+          zip -j -X "$zip_name" LICENSE NOTICE
+          unzip -l "$zip_name"
+          echo "ZIP_NAME=$zip_name" >> "$GITHUB_ENV"
+      - name: Publish the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "$GITHUB_REF_NAME" "$ZIP_NAME" --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --generate-notes --verify-tag

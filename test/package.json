@@ -1,0 +1,17 @@
+{
+  "name": "youtube-ad-fast-forward-test",
+  "private": true,
+  "description": "End-to-end tests for Ad Fast-Forward for YouTube.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "pretest": "bash gen-media.sh",
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

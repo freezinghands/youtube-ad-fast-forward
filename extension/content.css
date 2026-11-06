@@ -1,0 +1,13 @@
+/* Copyright 2026 Lee Jaeyun
+   SPDX-License-Identifier: Apache-2.0 */
+
+/* While YouTube marks the player as showing an ad, hide the ad video so only a black player shows.
+   The ad UI (Skip button, countdown) is not part of <video>, so it stays visible and clickable.
+   opacity keeps the video playing at 16x, where display: none would let Chrome pause a muted video. */
+#movie_player.ad-showing {
+  background: #000 !important;
+}
+
+#movie_player.ad-showing video {
+  opacity: 0 !important;
+}

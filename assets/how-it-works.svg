@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="800" height="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <title>A 30-second ad takes about 2 seconds, muted and blacked out. A long ad plays its first 15 seconds in about 1 second, then waits, paused, until you press Skip.</title>
+  <rect width="800" height="380" rx="18" fill="#111114"/>
+  <text x="40" y="52" fill="#ffffff" font-size="22" font-weight="600">What an ad break takes</text>
+  <text x="40" y="78" fill="#9ca3af" font-size="14">Time from the start of the ad, in seconds</text>
+
+  <!-- time axis: x = 230 + 15 * seconds -->
+  <g fill="#6b7280" font-size="12" text-anchor="middle">
+    <text x="230" y="110">0</text>
+    <text x="380" y="110">10</text>
+    <text x="530" y="110">20</text>
+    <text x="680" y="110">30</text>
+  </g>
+  <g stroke="#2a2a31" stroke-width="1">
+    <line x1="230" y1="118" x2="230" y2="350"/>
+    <line x1="380" y1="118" x2="380" y2="350"/>
+    <line x1="530" y1="118" x2="530" y2="350"/>
+    <line x1="680" y1="118" x2="680" y2="350"/>
+  </g>
+
+  <!-- row 1: without -->
+  <text x="40" y="148" fill="#ffffff" font-size="15" font-weight="600">Without</text>
+  <text x="40" y="168" fill="#9ca3af" font-size="13">30 s ad</text>
+  <rect x="230" y="132" width="450" height="34" rx="6" fill="#ffb81c"/>
+  <text x="246" y="154" fill="#111114" font-size="14" font-weight="600">Ad, 1x, with sound and picture</text>
+  <rect x="684" y="132" width="76" height="34" rx="6" fill="#4b5563"/>
+  <text x="722" y="154" fill="#ffffff" font-size="14" text-anchor="middle">Video</text>
+
+  <!-- row 2: with the extension -->
+  <text x="40" y="228" fill="#ffffff" font-size="15" font-weight="600">With Ad Fast-Forward</text>
+  <text x="40" y="248" fill="#9ca3af" font-size="13">30 s ad</text>
+  <rect x="230" y="212" width="29" height="34" rx="6" fill="#ffb81c"/>
+  <rect x="263" y="212" width="497" height="34" rx="6" fill="#4b5563"/>
+  <text x="279" y="234" fill="#ffffff" font-size="14">Video</text>
+  <text x="230" y="268" fill="#ffb81c" font-size="13">About 2 s at 16x, muted and blacked out</text>
+
+  <!-- row 3: long ad -->
+  <text x="40" y="308" fill="#ffffff" font-size="15" font-weight="600">Long ad</text>
+  <text x="40" y="328" fill="#9ca3af" font-size="13">over about 65 s</text>
+  <rect x="230" y="292" width="15" height="34" rx="5" fill="#ffb81c"/>
+  <rect x="249" y="292" width="232" height="34" rx="6" fill="none" stroke="#ffb81c" stroke-width="2" stroke-dasharray="6 5"/>
+  <g fill="#ffb81c">
+    <rect x="263" y="301" width="5" height="16" rx="1"/>
+    <rect x="272" y="301" width="5" height="16" rx="1"/>
+  </g>
+  <text x="287" y="314" fill="#ffffff" font-size="14">Paused until you press Skip</text>
+  <rect x="485" y="292" width="275" height="34" rx="6" fill="#4b5563"/>
+  <text x="501" y="314" fill="#ffffff" font-size="14">Video</text>
+  <text x="230" y="348" fill="#ffb81c" font-size="13">Its first 15 s play in about 1 s, muted and blacked out</text>
+</svg>
