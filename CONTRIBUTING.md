@@ -63,6 +63,26 @@ YouTube changes its player without notice, and the extension can break as a resu
 - Leave `version` in `extension/manifest.json` as it is. The maintainer sets it on release.
 - By submitting a contribution you agree that it is licensed under the [Apache License 2.0](LICENSE), as section 5 of the license describes.
 
+## Commit messages
+
+Pull requests are squash-merged, and the pull request title becomes the commit message on `main`. Write the title, and any commit pushed to `main`, as one line:
+
+```
+<type>(<scope>): <summary>
+```
+
+- **type** is one of `feat` (new behaviour), `fix` (a bug fix), `refactor` (no change in behaviour), `perf`, `test` (tests only), `docs` (docs only), `build` (dependencies and tooling), `ci` (GitHub Actions), `chore` (other repository settings) and `revert`.
+- **scope** names the part that changed: `content` (`content.js`, `content.css`), `sw` (`sw.js`), `manifest`, `i18n` (`_locales/`) or `icons`. Leave it out for docs-only changes and for changes that span several parts.
+- **summary** is in English and in the imperative ("add", not "added"), starts with a lowercase letter, has no full stop and stays around 50 characters. It says what changed, not what you worked on. If it needs "and" to join two changes, make two commits.
+
+There is no body: the reason for a change goes in the pull request description, and what a reader of the code needs goes in a code comment. The one exception is a commit written by an AI agent, which ends with a `Co-Authored-By:` line naming the agent, so the history shows which changes a person wrote.
+
+```
+fix(content): keep the tab muted between two ads
+feat(i18n): add a Japanese translation
+docs: add the Chrome Web Store link to the README
+```
+
 ## Releases
 
 The maintainer sets `version` in `extension/manifest.json`, merges it to `main` and pushes a tag with the same version, for example `v0.5.0`. The release workflow checks that the tag matches the manifest, packages `extension/` with LICENSE and NOTICE into a ZIP, and publishes a GitHub release with it. That ZIP is what goes to the browser stores.
