@@ -60,7 +60,7 @@ Chrome does not automatically update an extension installed this way. When a new
 
 - An ad is showing when the player (`#movie_player`) has the `ad-showing` class.
 - During an ad the video plays at 16x, the highest rate Chrome allows.
-- During an ad the video is hidden, so the player shows black. Ad UI such as the Skip button stays visible. The player stays black while a long ad is paused. The CSS depends on the `ad-showing` class, so it lifts by itself when the ad ends.
+- During an ad the video is hidden, so the player shows black. Ad UI such as the Skip button stays visible. The player stays black while a long ad is paused. The CSS depends on the `ad-showing` class, so it lifts automatically when the ad ends.
 - The ad video is muted as soon as the ad is detected (the same effect as the `m` key, but not a toggle). If YouTube unmutes it while loading an ad, it is muted again. The tab is muted too, as a backup.
 - A long ad pauses once, after 15 s of it have played, if at least 50 s remain. Some ads open Skip only after 15 s, so it never pauses earlier. As a result only ads longer than about 65 s pause; a typical 20 s ad ends in just over a second at 16x. You press Skip yourself (YouTube ignores clicks made by scripts), and the ad waits, paused, until you do. If you press Play instead, that ad does not pause again. The rule uses only the length of the ad video, never the look or class of the Skip button.
 - When the ad ends, the rate goes back at once and sound comes back 0.8 s later, so the gap between two ads in a row stays silent.
@@ -70,7 +70,7 @@ Chrome does not automatically update an extension installed this way. When a new
 
 - The extension undoes only the mutes it made. A video muted before the ad, and a tab muted by you or by another extension, stay muted.
 - If you unmute the video during an ad (mute button, `m`, or the Up/Down arrow keys), it is not muted again until the ads end. The tab mute stays, though: to hear the ad right away, click the toolbar icon.
-- The tab mute lasts only while the page keeps renewing it. If renewals stop for 6 s, it lifts by itself. Leaving the page during an ad lifts it at once.
+- The tab mute lasts only while the page keeps renewing it. If renewals stop for 6 s, it lifts automatically. Leaving the page during an ad lifts it at once.
 - Clicking the toolbar icon during an ad unmutes the ad and the tab at once and keeps them unmuted until the ads in a row have all ended. A click outside ads changes nothing for the next ad.
 
 ## FAQ
