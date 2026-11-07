@@ -10,6 +10,12 @@
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl"><img src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png" width="206" alt="Available in the Chrome Web Store"></a>
+</p>
+
+<p align="center">
+  <a href="https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl"><img src="https://img.shields.io/chrome-web-store/v/lppcpcgcnibijccfpccdbcpilhmoajjl?label=Chrome%20Web%20Store" alt="Chrome Web Store version"></a>
+  <a href="https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest"><img src="https://img.shields.io/github/v/release/freezinghands/youtube-ad-fast-forward" alt="Latest release"></a>
   <a href="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml"><img src="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License: Apache-2.0"></a>
   <a href="https://doi.org/10.5281/zenodo.24005315"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24005315.svg" alt="DOI"></a>
@@ -33,16 +39,22 @@
 
 ## Install
 
-Ad Fast-Forward has been submitted to the Chrome Web Store and is in review. Until it is published there, install it from a release:
+**[Install Ad Fast-Forward from the Chrome Web Store](https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl)**. Then reload your open YouTube tabs, and pin it from the Extensions menu (the puzzle icon) so its toolbar icon is at hand during an ad.
+
+It needs Chrome 123 or later. Before you install it, read [YouTube policy changes](#youtube-policy-changes).
+
+After the extension updates, or after you turn it off or reload it, reload your open YouTube tabs too. Otherwise their ads play black, at 1x and with sound, because only the CSS is left.
+
+### Install from a release
+
+To install it without the store:
 
 1. Download the ZIP from the [latest release](https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest) and unzip it. You can also clone this repository and use its `extension/` folder.
 2. Open `chrome://extensions` and turn on **Developer mode**.
 3. Click **Load unpacked** and choose the unzipped folder (or `extension/`).
 4. Pin Ad Fast-Forward from the Extensions menu (the puzzle icon) so its toolbar icon is at hand during an ad.
 
-It needs Chrome 123 or later. Before you install it, read [YouTube policy changes](#youtube-policy-changes).
-
-After you turn the extension off or reload it, reload your open YouTube tabs too. Otherwise their ads play black, at 1x and with sound, because only the CSS is left.
+Chrome does not automatically update an extension installed this way. When a new release comes out, you have to update it manually.
 
 ## How it works
 
@@ -101,7 +113,7 @@ This extension relies on how YouTube works today. YouTube can change its player,
 | changes its player markup (`#movie_player`, `ad-showing`, `html5-main-video`) | Ads are handled only in part or not at all: for example they play at 1x in black, or at 1x with sound and picture. |
 | keeps `ad-showing` on outside ads | The video itself is treated as an ad: black, muted and at 16x. |
 
-The extension does not detect warnings or adapt by itself, and it does not update itself. If any of this happens, turn it off in `chrome://extensions` and reload your YouTube tabs.
+The extension does not detect warnings or adapt by itself. A fix reaches you only as a new version, which Chrome installs for you if you installed from the store. If any of this happens, turn it off in `chrome://extensions` and reload your YouTube tabs.
 
 ## Translations
 
@@ -109,7 +121,7 @@ The extension's name, description and toolbar tooltip are translated in [`extens
 
 ## Roadmap
 
-- [ ] Chrome Web Store listing (submitted, in review)
+- [x] [Chrome Web Store listing](https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl)
 - [ ] Microsoft Edge Add-ons and Naver Whale Store listings
 - [ ] Firefox support ([`browser-port` issues](https://github.com/freezinghands/youtube-ad-fast-forward/labels/browser-port), help wanted)
 - [ ] More translations ([`translation` issues](https://github.com/freezinghands/youtube-ad-fast-forward/labels/translation), good first issues)
@@ -139,4 +151,4 @@ If Ad Fast-Forward saves you time, a star helps other people find it.
 
 [Apache License 2.0](LICENSE). Copyright 2026 Lee Jaeyun; see [NOTICE](NOTICE). If you redistribute this extension or a modified version, keep the LICENSE and NOTICE files with it.
 
-YouTube is a trademark of Google LLC. This project is not affiliated with, endorsed by or sponsored by YouTube or Google.
+YouTube and Chrome are trademarks of Google LLC. This project is not affiliated with, endorsed by or sponsored by YouTube or Google.

@@ -6,7 +6,7 @@ body:
     attributes:
       value: |
         YouTube changes its player without notice, so the extension can break from time to time.
-        Before you report, reload your YouTube tabs after installing or reloading the extension.
+        Before you report, reload your YouTube tabs after installing, updating or reloading the extension.
   - type: input
     id: extension-version
     attributes:

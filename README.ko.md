@@ -10,6 +10,12 @@
 </p>
 
 <p align="center">
+  <a href="https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl"><img src="https://developer.chrome.com/static/docs/webstore/branding/image/HRs9MPufa1J1h5glNhut.png" width="206" alt="Chrome 웹스토어에서 설치"></a>
+</p>
+
+<p align="center">
+  <a href="https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl"><img src="https://img.shields.io/chrome-web-store/v/lppcpcgcnibijccfpccdbcpilhmoajjl?label=Chrome%20Web%20Store" alt="Chrome 웹스토어 버전"></a>
+  <a href="https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest"><img src="https://img.shields.io/github/v/release/freezinghands/youtube-ad-fast-forward" alt="최신 릴리스"></a>
   <a href="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml"><img src="https://github.com/freezinghands/youtube-ad-fast-forward/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-Apache--2.0-blue" alt="License: Apache-2.0"></a>
   <a href="https://doi.org/10.5281/zenodo.24005315"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.24005315.svg" alt="DOI"></a>
@@ -35,16 +41,22 @@
 
 ## 설치
 
-Chrome 웹스토어에 제출해 심사를 받고 있습니다. 스토어에 게시되기 전까지는 릴리스에서 설치하세요.
+**[Chrome 웹스토어에서 Ad Fast-Forward 설치하기](https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl)**. 설치한 뒤에는 열려 있는 YouTube 탭을 새로고침하세요. 확장 프로그램 메뉴(퍼즐 아이콘)에서 고정해 두면 광고 중에 툴바 아이콘을 바로 누를 수 있습니다.
+
+Chrome 123 이상이 필요합니다. 설치하기 전에 [YouTube 정책 변경](#youtube-정책-변경)을 읽어 주세요.
+
+확장이 업데이트되거나, 확장을 끄거나 다시 로드한 뒤에는 열려 있는 YouTube 탭도 새로고침하세요. 그러지 않으면 CSS만 남아서 광고가 검은 화면에 1배속으로, 소리와 함께 재생됩니다.
+
+### 릴리스에서 설치
+
+스토어를 거치지 않고 설치하는 방법입니다.
 
 1. [최신 릴리스](https://github.com/freezinghands/youtube-ad-fast-forward/releases/latest)에서 ZIP을 내려받아 압축을 풉니다. 이 저장소를 클론해서 `extension/` 폴더를 써도 됩니다.
 2. `chrome://extensions`를 열고 **개발자 모드**를 켭니다.
 3. **압축해제된 확장 프로그램 로드**를 누르고 압축을 푼 폴더(또는 `extension/`)를 고릅니다.
 4. 확장 프로그램 메뉴(퍼즐 아이콘)에서 Ad Fast-Forward를 고정해 두면 광고 중에 툴바 아이콘을 바로 누를 수 있습니다.
 
-Chrome 123 이상이 필요합니다. 설치하기 전에 [YouTube 정책 변경](#youtube-정책-변경)을 읽어 주세요.
-
-확장을 끄거나 다시 로드한 뒤에는 열려 있는 YouTube 탭도 새로고침하세요. 그러지 않으면 CSS만 남아서 광고가 검은 화면에 1배속으로, 소리와 함께 재생됩니다.
+Chrome은 이렇게 설치한 확장을 자동으로 업데이트하지 않습니다. 새 릴리스가 나오면 수동으로 업데이트해야 합니다.
 
 ## 동작 방식
 
@@ -103,7 +115,7 @@ Chrome 확장을 설치할 수 있는 Chromium 브라우저라면 동작할 것�
 | 플레이어 마크업(`#movie_player`, `ad-showing`, `html5-main-video`)을 바꾸면 | 광고가 일부만 처리되거나 전혀 처리되지 않습니다. 예를 들어 검은 화면에 1배속으로, 또는 소리와 화면이 그대로인 채 1배속으로 재생됩니다. |
 | 광고가 아닐 때도 `ad-showing`을 남겨 두면 | 본 영상이 광고로 취급되어 검게, 음소거된 채, 16배속으로 재생됩니다. |
 
-이 확장은 경고를 감지하거나 스스로 대응하지 않으며, 스스로 업데이트하지도 않습니다. 이런 일이 생기면 `chrome://extensions`에서 확장을 끄고 YouTube 탭을 새로고침하세요.
+이 확장은 경고를 감지하거나 스스로 대응하지 않습니다. 수정 사항은 새 버전으로만 전달되며, 스토어에서 설치했다면 Chrome이 새 버전을 설치해 줍니다. 이런 일이 생기면 `chrome://extensions`에서 확장을 끄고 YouTube 탭을 새로고침하세요.
 
 ## 번역
 
@@ -111,7 +123,7 @@ Chrome 확장을 설치할 수 있는 Chromium 브라우저라면 동작할 것�
 
 ## 로드맵
 
-- [ ] Chrome 웹스토어 등록 (제출, 심사 중)
+- [x] [Chrome 웹스토어 등록](https://chromewebstore.google.com/detail/lppcpcgcnibijccfpccdbcpilhmoajjl)
 - [ ] Microsoft Edge Add-ons, 네이버 웨일 스토어 등록
 - [ ] Firefox 지원 ([`browser-port` 이슈](https://github.com/freezinghands/youtube-ad-fast-forward/labels/browser-port), 도움 요청)
 - [ ] 번역 추가 ([`translation` 이슈](https://github.com/freezinghands/youtube-ad-fast-forward/labels/translation), 처음 기여하기 좋은 이슈)
@@ -141,4 +153,4 @@ Ad Fast-Forward가 시간을 아껴 줬다면, 별(Star)을 눌러 주세요. �
 
 [Apache License 2.0](LICENSE). Copyright 2026 Lee Jaeyun. [NOTICE](NOTICE)를 참고하세요. 이 확장이나 수정한 버전을 재배포할 때는 LICENSE와 NOTICE 파일을 함께 포함해야 합니다.
 
-YouTube는 Google LLC의 상표입니다. 이 프로젝트는 YouTube나 Google과 제휴, 보증, 후원 관계가 없습니다.
+YouTube와 Chrome은 Google LLC의 상표입니다. 이 프로젝트는 YouTube나 Google과 제휴, 보증, 후원 관계가 없습니다.
